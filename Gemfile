@@ -25,6 +25,12 @@ gem 'cancancan', '~> 1.15.0'
 gem 'carrierwave'
 gem 'rails_admin_rollincode', '~> 1.0'
 
+# Gem para gerar os pdfs
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff'
+gem 'rmagick'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
