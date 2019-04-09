@@ -75,7 +75,7 @@ module RailsAdmin
                 total = 0
 
                 @object.comissions.where(status: :pending).each do |c|
-                  pdf.text "Id #{c.id}, valor R$#{c.value}, gerada em #{c.created_at.strftime("%d/%m/%y as %H:%M")}",
+                  pdf.text "Id #{c.id}, valor R$#{c.value}, gerada em #{c.created_at.strftime("%m/%d/%Y, %H:%M:%S")}",
                     :size => 12, :align => :justify, :inline_format => true
                   pdf.move_down 8
 
@@ -104,7 +104,7 @@ module RailsAdmin
                     :size => 12, :align => :justify, :inline_format => true
                   pdf.move_down 8
 
-                  pdf.text "Cliente desde #{c.created_at.strftime("%d/%m/%y as %H:%M")}",
+                  pdf.text "Cliente desde #{c.created_at.strftime("%m/%d/%Y, %H:%M:%S")}",
                     :size => 12, :align => :justify, :inline_format => true
                   pdf.move_down 8
 
