@@ -62,7 +62,7 @@ module RailsAdmin
 
               if @object.email
                 pdf.text "Email: #{@object.email}", :size => 12, :align => :justify, :inline_format => true
-                pdf.move_down 8
+                pdf.move_down 8 
               end
 
               pdf.move_down 20
