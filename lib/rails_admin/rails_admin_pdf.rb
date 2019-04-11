@@ -87,7 +87,6 @@ module RailsAdmin
                 pdf.move_down 20
               end
 
-
               if @object.clients.count > 0
 
                 pdf.text "Clientes Ativos", :size => 14, :align => :justify, :inline_format => true, :style => :bold
