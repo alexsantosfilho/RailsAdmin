@@ -9,12 +9,12 @@ module Omniauthenticable
           existing_user.update!(provider: auth.provider, uid: auth.uid)
           existing_user
         else
-          where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-            user.email                 = auth.info.email
-            user.password              = Devise.friendly_token[0, 20]
-            user.password_confirmation = user.password
-            user.name                  = auth.info.name
-            user.skip_confirmation!
+          where(provider: auth.provider, uid: auth.uid).first_or_create do |users|
+            users.email                 = auth.info.email
+            users.password              = Devise.friendly_token[0, 20]
+            users.password_confirmation = users.password
+            users.name                  = auth.info.name
+            users.skip_confirmation!
           end
         end
       end
