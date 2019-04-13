@@ -14,7 +14,7 @@ module Omniauthenticable
             users.password              = Devise.friendly_token[0, 20]
             users.password_confirmation = users.password
             users.name                  = auth.info.name
-            users.skip_reconfirmation!
+            users.skip_confirmation!
           end
         end
       end
