@@ -2,7 +2,7 @@ class User < ApplicationRecord
   include Omniauthenticable
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable, omniauth_providers: %i[facebook]
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :confirmable, omniauth_providers: %i[facebook]
 
   enum kind: [:salesman, :manager]
     enum status: [:active, :inactive]
