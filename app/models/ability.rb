@@ -4,6 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can :manage, :all
     if user
       if user.kind == 'salesman'
         can :access, :rails_admin
