@@ -24,7 +24,7 @@ module Omniauthenticable
           data = session['devise.facebook_data'] &&
             session['devise.facebook_data']['extra']['raw_info']
 
-          user.email = data['email'] if data && user.email.blank?
+          # user.email = data['email'] if data && user.email.blank?
         end
       end
     end
